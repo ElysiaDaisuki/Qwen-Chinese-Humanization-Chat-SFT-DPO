@@ -75,7 +75,7 @@ solution/
 -   适配 Qwen2.5 chat template 格式
 -   支持DPO偏好数据格式化（chosen/rejected样本对）
 
-### 2. LoRA 
+### 2. 基于LoRA的后训练（Post-training） 
 
 -   **SFT（监督微调）**：基础对话风格训练
     - 目标模块：q_proj/k_proj/v_proj/o_proj
