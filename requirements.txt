@@ -1,10 +1,12 @@
 # requirements.txt
-torch
-numpy
-tqdm
-transformers
-peft
-datasets
-pandas
-evaluate
-bert_score
+torch==2.2.0
+transformers==4.41.2
+peft==0.10.0
+accelerate==0.30.1
+datasets==2.19.1
+evaluate==0.4.1
+bert-score==0.3.13
+numpy==1.26.4
+pandas==2.2.1
+tqdm==4.66.4
+bitsandbytes>=0.43.1
