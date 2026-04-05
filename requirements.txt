@@ -1,0 +1,10 @@
+# requirements.txt
+torch
+numpy
+tqdm
+transformers
+peft
+datasets
+pandas
+evaluate
+bert_score
