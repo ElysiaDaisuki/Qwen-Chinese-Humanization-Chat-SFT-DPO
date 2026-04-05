@@ -1,5 +1,5 @@
-# Qwen2.5-7B-Instruct 网络闲聊风格微调与评估
-该项目基于LCCC网络闲聊数据实现了对阿里云通义千问 Qwen2.5-7B-Instruct 模型的 LoRA 微调、推理和评估功能，使模型学会网络聊天对话风格，更具人性。支持其他形式的对话数据的训练、批量推理和多维度指标评估。
+# Qwen2.5-7B-Instruct 网络闲聊风格微调+直接偏好优化
+该项目基于LCCC网络闲聊数据实现了对阿里云通义千问 Qwen2.5-7B-Instruct 模型的 LoRA 微调、推理和评估功能，使模型学会网络聊天对话风格，更具人性。支持其他形式的对话数据的训练、批量推理和多维度指标评估。并基于hh-rlhf数据集进行DPO，保证模型输出内容无害且有益。
 
 ## 概览
 
@@ -17,7 +17,7 @@ solution/
 
   
 
-├── config.py # 模型训练/推理配置
+├── config.py # 模型SFT/推理/DPO配置
 
   
 
@@ -31,7 +31,9 @@ solution/
 
 ├── inference.py # 模型推理（交互式/单条/批量）
 
-  
+
+├── dpo_train.py # DPO偏好优化训练主程序  
+
 
 ├── train.py # 模型训练主程序
 
@@ -40,10 +42,15 @@ solution/
 
 ├── data/ 
 
+
 │   ├── train.json
+
 │   ├── valid.json
+
 │   └── test.json
+
 ├── eval_result/ # 评估结果目录（自动生成）
+
 └── Qwen2.5-7B-Instruct/ # 基础模型目录
 
 
